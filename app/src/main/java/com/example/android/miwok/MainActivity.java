@@ -44,10 +44,17 @@ public class MainActivity extends AppCompatActivity {
         onClickListen(phrases, PhrasesActivity.class);
     }
 
+    /**
+     * Method handler switching between Main Activity and others Activities.
+     *
+     * @param tv Name of textView from where should go init listener.
+     * @param c  Name of class in with should switch.
+     */
     public void onClickListen(TextView tv, final Class c) {
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent i = new Intent(MainActivity.this, c);
                 startActivity(i);
             }
