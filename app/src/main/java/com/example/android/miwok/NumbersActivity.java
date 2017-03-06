@@ -1,15 +1,10 @@
 package com.example.android.miwok;
 
-import android.app.ActionBar;
-import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -17,15 +12,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
-    int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.word_list);
 
-        //Create a root view (LinearLayout) of activity_numbers.xml
-        //final LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
 
         //Create a array of words
         final ArrayList<Word> words = new ArrayList<>();
@@ -49,6 +41,7 @@ public class NumbersActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
     }
+
 
     /**
      * Method witch gone execute when button is pressed.
